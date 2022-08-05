@@ -1,0 +1,40 @@
+{
+	"name": "bodyparse",
+	"version": "1.0.0",
+	"description": "",
+	"source": "src/index.html",
+	"browserslist": "> 0.5%, last 2 versions, not dead",
+	"scripts": {
+		"start": "parcel",
+		"build": "parcel build",
+		"lint": "eslint --fix ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Dyeuse/Bodyparse.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Dyeuse/Bodyparse/issues"
+	},
+	"homepage": "https://github.com/Dyeuse/Bodyparse#readme",
+	"devDependencies": {
+		"eslint": "^8.21.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.30.1",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"parcel": "^2.7.0",
+		"prettier": "^2.7.1",
+		"process": "^0.11.10"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
+}
