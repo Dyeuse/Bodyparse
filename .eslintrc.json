@@ -11,7 +11,13 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["react"],
-	"rules": { "no-console": "off", "prettier/prettier": "error" },
-	"import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+	"plugins": ["react", "eslint-plugin-prettier"],
+	"rules": {
+		"no-console": "off",
+		"prettier/prettier": "error",
+		"import/no-extraneous-dependencies": [
+			"error",
+			{ "devDependencies": true }
+		]
+	}
 }
