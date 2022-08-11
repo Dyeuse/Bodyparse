@@ -1,0 +1,14 @@
+form {
+	display: flex;
+	flex-direction: column;
+	background-color: blue;
+}
+
+.personal-data {
+	display: flex;
+}
+
+form button {
+	width: fit-content;
+	margin: 20px auto;
+}

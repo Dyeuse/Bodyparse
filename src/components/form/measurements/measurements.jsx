@@ -1,9 +1,10 @@
 import React from "react";
 import Measurement from "./measurement";
+import "./measurements.css";
 
 function Measurements() {
   return (
-    <div>
+    <div className="measurements">
       <Measurement label="height" unity="cm" />
       <Measurement label="weight" unity="kg" />
       <Measurement label="waist" unity="cm" />

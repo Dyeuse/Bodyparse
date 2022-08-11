@@ -1,0 +1,12 @@
+.container {
+	display: flex;
+	margin: 50px auto;
+	flex-direction: column;
+	width: 700px;
+	align-items: stretch;
+	background-color: red;
+}
+
+.container h1 {
+	text-align: center;
+}

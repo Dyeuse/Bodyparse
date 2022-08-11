@@ -1,9 +1,10 @@
 import React from "react";
 import Card from "./card";
+import "./cards.css";
 
 function Cards() {
   return (
-    <div>
+    <div className="cards">
       <Card title="IMC" />
       <Card title="IMG" />
       <Card title="FFMI" />
