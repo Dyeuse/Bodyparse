@@ -5,14 +5,15 @@ function Measurement({ measurement, handleChange, label, unity }) {
     return (
         <div>
             <label htmlFor={label}>{label}</label>
-            <input onChange={handleChange} id={label} value={measurement} />
+            <input type="number" onChange={handleChange} id={label} value={measurement} />
             <div>{unity}</div>
         </div>
     );
 }
 
 Measurement.propTypes = {
-    measurement: PropTypes.number.isRequired,
+    measurement: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])])
+        .isRequired,
     handleChange: PropTypes.func.isRequired,
     label: PropTypes.string.isRequired,
     unity: PropTypes.string.isRequired,

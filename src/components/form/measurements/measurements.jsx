@@ -42,11 +42,11 @@ function Measurements({ measurements, handleChange }) {
 
 Measurements.propTypes = {
     measurements: PropTypes.shape({
-        height: PropTypes.number,
-        weight: PropTypes.number,
-        waist: PropTypes.number,
-        neck: PropTypes.number,
-        hip: PropTypes.number,
+        height: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
+        weight: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
+        waist: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
+        neck: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
+        hip: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
     }).isRequired,
     handleChange: PropTypes.func.isRequired,
 };

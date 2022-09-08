@@ -3,17 +3,29 @@ import DataForm from "./form/dataForm";
 import Cards from "./results/cards";
 import "./app.css";
 
-function App() {
+function usePersonelData() {
     const [personalData, setPersonalData] = useState({
         height: "",
         weight: "",
         waist: "",
         neck: "",
         hip: "",
+        language: "",
+        gender: "",
+        unity: "",
+        activity: "",
+        autoIMG: "",
     });
     const updatePersonalData = useCallback((newPersonalData) => {
-        setPersonalData({ ...personalData, ...newPersonalData });
+        setPersonalData(newPersonalData);
+        console.log(newPersonalData);
     });
+
+    return [personalData, updatePersonalData];
+}
+
+function App() {
+    const [personalData, updatePersonalData] = usePersonelData();
     return (
         <div className="container">
             <h1>Bodyparse</h1>
