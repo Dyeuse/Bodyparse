@@ -21,6 +21,8 @@ function IMGSelector({ options, handleChange }) {
                         type="number"
                         onChange={handleChange}
                         value={options.specIMG}
+                        min="3"
+                        max="60"
                     />
                 )}
             </label>

@@ -11,30 +11,40 @@ function Measurements({ measurements, handleChange }) {
                 handleChange={handleChange}
                 label="height"
                 unity="cm"
+                min="100"
+                max="250"
             />
             <Measurement
                 measurement={measurements.weight}
                 handleChange={handleChange}
                 label="weight"
                 unity="kg"
+                min="30"
+                max="300"
             />
             <Measurement
                 measurement={measurements.waist}
                 handleChange={handleChange}
                 label="waist"
                 unity="cm"
+                min="40"
+                max="200"
             />
             <Measurement
                 measurement={measurements.neck}
                 handleChange={handleChange}
                 label="neck"
                 unity="cm"
+                min="20"
+                max="80"
             />
             <Measurement
                 measurement={measurements.hip}
                 handleChange={handleChange}
                 label="hip"
                 unity="cm"
+                min="40"
+                max="200"
             />
         </div>
     );
