@@ -16,7 +16,6 @@ function useMeasurements() {
     const handleMeasurementsChange = useCallback((e) => {
         const name = e.target.id;
         const newValues = +e.target.value;
-        console.log(typeof newValues);
         setMeasurements({ ...measurements, [name]: newValues });
     });
 
@@ -30,11 +29,12 @@ function useOptions() {
         unity: "Metric",
         activity: "1.2",
         autoIMG: "auto",
+        specIMG: "",
     });
 
     const handleOptionsChange = useCallback((e) => {
         const { name } = e.target;
-        const newValues = e.target.value;
+        const newValues = name === "specIMG" ? +e.target.value : e.target.value;
         setOptions({ ...options, [name]: newValues });
     });
 
