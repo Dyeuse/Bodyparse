@@ -33,7 +33,7 @@ function calcWomanBFP({ height, waist, neck }) {
 }
 
 function calcBFP(personalData) {
-    return personalData.gender === "male"
+    return personalData.gender === "Mal"
         ? calcManBFP(personalData)
         : calcWomanBFP(personalData);
 }
