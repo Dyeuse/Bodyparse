@@ -38,14 +38,6 @@ function Measurements({ measurements, handleChange }) {
                 min="20"
                 max="80"
             />
-            <Measurement
-                measurement={measurements.hip}
-                handleChange={handleChange}
-                label="hip"
-                unity="cm"
-                min="40"
-                max="200"
-            />
         </div>
     );
 }
@@ -56,7 +48,6 @@ Measurements.propTypes = {
         weight: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
         waist: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
         neck: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
-        hip: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
     }).isRequired,
     handleChange: PropTypes.func.isRequired,
 };

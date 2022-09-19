@@ -9,7 +9,6 @@ function usePersonelData() {
         weight: "",
         waist: "",
         neck: "",
-        hip: "",
         language: "",
         gender: "",
         activity: "",

@@ -10,7 +10,6 @@ function useMeasurements() {
         weight: "",
         waist: "",
         neck: "",
-        hip: "",
     });
 
     const handleMeasurementsChange = useCallback((e) => {
