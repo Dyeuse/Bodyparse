@@ -26,7 +26,6 @@ function useOptions() {
     const [options, setOptions] = useState({
         language: "English",
         gender: "Mal",
-        unity: "Metric",
         activity: "1.2",
         autoIMG: "auto",
         specIMG: "",

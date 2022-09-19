@@ -19,13 +19,6 @@ function Selectors({ options, handleChange }) {
                 option2="Female"
                 name="gender"
             />
-            <Selector
-                handleChange={handleChange}
-                selectedValue={options.unity}
-                option1="Metric"
-                option2="Imperial"
-                name="unity"
-            />
         </div>
     );
 }
@@ -34,7 +27,6 @@ Selectors.propTypes = {
     options: PropTypes.shape({
         language: PropTypes.string,
         gender: PropTypes.string,
-        unity: PropTypes.string,
         activity: PropTypes.string,
         autoIMG: PropTypes.string,
     }).isRequired,

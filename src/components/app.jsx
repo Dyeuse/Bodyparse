@@ -12,7 +12,6 @@ function usePersonelData() {
         hip: "",
         language: "",
         gender: "",
-        unity: "",
         activity: "",
         autoIMG: "",
     });

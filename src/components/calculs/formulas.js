@@ -4,18 +4,18 @@ function round(number, place = 0) {
     return Math.round(number * 10 ** place) / 10 ** place;
 }
 
-function convertInchToCm(value) {
+/* function convertInchToCm(value) {
     return round(value * 2.54); // 1 inch = 2.54 cm
 }
 
 function convertLbstoKg(value) {
     return round(value * 0.454); // 1 lb = 0.454 kg
-}
+} */
 
 // BMI => Body Mass Index
 
 function calcBMI({ height, weight }) {
-    const BMI = weight / (height ** 2 / 100);
+    const BMI = weight / (height / 100) ** 2;
     return round(BMI, 1);
 }
 
@@ -32,8 +32,10 @@ function calcWomanBFP({ height, waist, neck }) {
     return round(BFP, 2);
 }
 
-function calcBFP(measurements, gender) {
-    return gender === "male" ? calcManBFP(measurements) : calcWomanBFP(measurements);
+function calcBFP(personalData) {
+    return personalData.gender === "male"
+        ? calcManBFP(personalData)
+        : calcWomanBFP(personalData);
 }
 
 // FFMI (Normalized) => Fat-Free Mass Index
@@ -64,8 +66,8 @@ function calcBMR({ weight }, BFP) {
 
 // TDEE => Total Daily Energy Expenditure
 
-function calcTDEE(BMR, coef) {
-    const TDEE = BMR * coef;
+function calcTDEE({ activity }, BMR) {
+    const TDEE = BMR * activity;
     return round(TDEE);
 }
 
