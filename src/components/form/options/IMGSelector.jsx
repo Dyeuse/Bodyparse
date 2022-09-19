@@ -34,7 +34,6 @@ IMGSelector.propTypes = {
     options: PropTypes.shape({
         language: PropTypes.string.isRequired,
         gender: PropTypes.string.isRequired,
-        unity: PropTypes.string.isRequired,
         activity: PropTypes.string.isRequired,
         autoIMG: PropTypes.string.isRequired,
         specIMG: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])])
