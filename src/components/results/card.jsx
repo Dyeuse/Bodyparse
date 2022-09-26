@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Card({ title, result }) {
+function Card({ children, result }) {
     return (
         <div>
-            <h2>{title}</h2>
+            <h2>{children}</h2>
             <div>{result}</div>
         </div>
     );
 }
 
 Card.propTypes = {
-    title: PropTypes.string.isRequired,
+    children: PropTypes.string.isRequired,
     result: PropTypes.number.isRequired,
 };
 

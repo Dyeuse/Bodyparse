@@ -11,11 +11,11 @@ function Cards({ personalData }) {
     const TDEE = calcTDEE(personalData, BMR);
     return (
         <div className="cards">
-            <Card title="BMI" result={BMI} />
-            <Card title="BFP" result={BFP} />
-            <Card title="FFMI" result={FFMI} />
-            <Card title="BMR" result={BMR} />
-            <Card title="TDEE" result={TDEE} />
+            <Card result={BMI}>BMI</Card>
+            <Card result={BFP}>BFP</Card>
+            <Card result={FFMI}>FFMI</Card>
+            <Card result={BMR}>BMR</Card>
+            <Card result={TDEE}>TDEE</Card>
         </div>
     );
 }
