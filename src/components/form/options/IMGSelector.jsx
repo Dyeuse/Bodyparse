@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
+import LanguageContext from "../../LanguageContext";
 
 function IMGSelector({ options, handleChange }) {
+    const { currentLanguage } = useContext(LanguageContext);
+    const English = currentLanguage === "English";
     return (
         <div>
             <label htmlFor="img">
-                IMG
+                {English ? "BFP" : "IMG"}
                 <select
                     value={options.autoIMG}
                     id="img"
                     name="autoIMG"
                     onChange={handleChange}
                 >
-                    <option value="auto">auto calc</option>
-                    <option value="spec">specific</option>
+                    <option value="auto">{English ? "auto calc" : "calc auto"}</option>
+                    <option value="spec">{English ? "specific" : "spécifique"}</option>
                 </select>
                 {options.autoIMG === "auto" ? null : (
                     <input
@@ -32,7 +35,6 @@ function IMGSelector({ options, handleChange }) {
 
 IMGSelector.propTypes = {
     options: PropTypes.shape({
-        language: PropTypes.string.isRequired,
         gender: PropTypes.string.isRequired,
         activity: PropTypes.string.isRequired,
         autoIMG: PropTypes.string.isRequired,

@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Measurement({ measurement, handleChange, label, unity, min, max }) {
+function Measurement({ measurement, handleChange, id, label, unity, min, max }) {
     return (
         <div>
-            <label htmlFor={label}>{label}</label>
+            <label htmlFor={id}>{label}</label>
             <input
                 type="number"
                 onChange={handleChange}
-                id={label}
+                id={id}
                 value={measurement}
                 min={min}
                 max={max}

@@ -1,10 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Selector({ handleChange, selectedValue, option1, option2, name }) {
+function Selector({
+    handleChange,
+    selectedValue,
+    option1,
+    option2,
+    label1,
+    label2,
+    name,
+}) {
     return (
         <div onChange={handleChange}>
-            <label htmlFor={option1}>{option1}</label>
+            <label htmlFor={option1}>{label1}</label>
             <input
                 type="radio"
                 id={option1}
@@ -12,7 +20,7 @@ function Selector({ handleChange, selectedValue, option1, option2, name }) {
                 value={option1}
                 defaultChecked={selectedValue === option1}
             />
-            <label htmlFor={option2}>{option2}</label>
+            <label htmlFor={option2}>{label2}</label>
             <input
                 type="radio"
                 id={option2}

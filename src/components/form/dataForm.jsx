@@ -1,7 +1,8 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useContext } from "react";
 import PropTypes from "prop-types";
 import Measurements from "./measurements/measurements";
 import Options from "./options/options";
+import LanguageContext from "../LanguageContext";
 import "./dataForm.css";
 
 function useMeasurements() {
@@ -23,7 +24,6 @@ function useMeasurements() {
 
 function useOptions() {
     const [options, setOptions] = useState({
-        language: "English",
         gender: "Mal",
         activity: "1.2",
         autoIMG: "auto",
@@ -48,6 +48,8 @@ function DataForm({ updatePersonalData }) {
         e.preventDefault();
         updatePersonalData({ ...measurements, ...options });
     });
+    const { currentLanguage } = useContext(LanguageContext);
+    const English = currentLanguage === "English";
 
     return (
         <form onSubmit={handleSubmit}>
@@ -58,7 +60,7 @@ function DataForm({ updatePersonalData }) {
                 />
                 <Options options={options} handleChange={handleOptionsChange} />
             </div>
-            <button type="submit">Calculate</button>
+            <button type="submit">{English ? "Calculate" : "Calculer"}</button>
         </form>
     );
 }

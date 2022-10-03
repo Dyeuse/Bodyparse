@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Measurement from "./measurement";
+import LanguageContext from "../../LanguageContext";
 import "./measurements.css";
 
 function Measurements({ measurements, handleChange }) {
+    const { currentLanguage } = useContext(LanguageContext);
+    const English = currentLanguage === "English";
     return (
         <div className="measurements">
             <Measurement
                 measurement={measurements.height}
                 handleChange={handleChange}
-                label="height"
+                id="height"
+                label={English ? "height" : "taille"}
                 unity="cm"
                 min="100"
                 max="250"
@@ -17,7 +21,8 @@ function Measurements({ measurements, handleChange }) {
             <Measurement
                 measurement={measurements.weight}
                 handleChange={handleChange}
-                label="weight"
+                id="weight"
+                label={English ? "weight" : "poids"}
                 unity="kg"
                 min="30"
                 max="300"
@@ -25,7 +30,8 @@ function Measurements({ measurements, handleChange }) {
             <Measurement
                 measurement={measurements.waist}
                 handleChange={handleChange}
-                label="waist"
+                id="waist"
+                label={English ? "waist" : "t de t"}
                 unity="cm"
                 min="40"
                 max="200"
@@ -33,7 +39,8 @@ function Measurements({ measurements, handleChange }) {
             <Measurement
                 measurement={measurements.neck}
                 handleChange={handleChange}
-                label="neck"
+                id="neck"
+                label={English ? "neck" : "cou"}
                 unity="cm"
                 min="20"
                 max="80"

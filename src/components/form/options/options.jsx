@@ -17,7 +17,6 @@ function Options({ options, handleChange }) {
 
 Options.propTypes = {
     options: PropTypes.shape({
-        language: PropTypes.string.isRequired,
         gender: PropTypes.string.isRequired,
         activity: PropTypes.string.isRequired,
         autoIMG: PropTypes.string.isRequired,
