@@ -7,12 +7,12 @@ function IMGSelector({ options, handleChange }) {
     const English = currentLanguage === "English";
     return (
         <div>
-            <label htmlFor="img">
+            <label htmlFor="BFP">
                 {English ? "BFP" : "IMG"}
                 <select
-                    value={options.autoIMG}
-                    id="img"
-                    name="autoIMG"
+                    value={options.autoBFP}
+                    id="BFP"
+                    name="autoBFP"
                     onChange={handleChange}
                 >
                     <option value="auto">{English ? "auto calc" : "calc auto"}</option>
@@ -20,10 +20,10 @@ function IMGSelector({ options, handleChange }) {
                 </select>
                 {options.autoIMG === "auto" ? null : (
                     <input
-                        name="specIMG"
+                        name="specBFP"
                         type="number"
                         onChange={handleChange}
-                        value={options.specIMG}
+                        value={options.specBFP}
                         min="3"
                         max="60"
                     />
@@ -37,8 +37,8 @@ IMGSelector.propTypes = {
     options: PropTypes.shape({
         gender: PropTypes.string.isRequired,
         activity: PropTypes.string.isRequired,
-        autoIMG: PropTypes.string.isRequired,
-        specIMG: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])])
+        autoBFP: PropTypes.string.isRequired,
+        specBFP: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])])
             .isRequired,
     }).isRequired,
     handleChange: PropTypes.func.isRequired,

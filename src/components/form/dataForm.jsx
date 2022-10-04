@@ -26,8 +26,8 @@ function useOptions() {
     const [options, setOptions] = useState({
         gender: "Mal",
         activity: "1.2",
-        autoIMG: "auto",
-        specIMG: "",
+        autoBFP: "auto",
+        specBFP: "",
     });
 
     const handleOptionsChange = useCallback((e) => {

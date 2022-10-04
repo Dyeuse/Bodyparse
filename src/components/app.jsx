@@ -12,7 +12,7 @@ function usePersonelData() {
         neck: "",
         gender: "",
         activity: "",
-        autoIMG: "",
+        autoBFP: "",
     });
     const updatePersonalData = useCallback((newPersonalData) => {
         setPersonalData(newPersonalData);

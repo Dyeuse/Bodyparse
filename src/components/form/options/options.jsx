@@ -19,8 +19,8 @@ Options.propTypes = {
     options: PropTypes.shape({
         gender: PropTypes.string.isRequired,
         activity: PropTypes.string.isRequired,
-        autoIMG: PropTypes.string.isRequired,
-        specIMG: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])])
+        autoBFP: PropTypes.string.isRequired,
+        specBFP: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])])
             .isRequired,
     }).isRequired,
     handleChange: PropTypes.func.isRequired,
