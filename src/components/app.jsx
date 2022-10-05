@@ -13,6 +13,7 @@ function usePersonelData() {
         gender: "",
         activity: "",
         autoBFP: "",
+        specBFP: "",
     });
     const updatePersonalData = useCallback((newPersonalData) => {
         setPersonalData(newPersonalData);

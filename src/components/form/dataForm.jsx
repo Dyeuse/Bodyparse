@@ -32,7 +32,7 @@ function useOptions() {
 
     const handleOptionsChange = useCallback((e) => {
         const { name } = e.target;
-        const newValues = name === "specIMG" ? +e.target.value : e.target.value;
+        const newValues = name === "specBFP" ? +e.target.value : e.target.value;
         setOptions({ ...options, [name]: newValues });
     });
 

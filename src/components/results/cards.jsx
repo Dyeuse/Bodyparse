@@ -8,7 +8,8 @@ function Cards({ personalData }) {
     const { currentLanguage } = useContext(LanguageContext);
     const English = currentLanguage === "English";
     const BMI = calcBMI(personalData);
-    const BFP = calcBFP(personalData);
+    const BFP =
+        personalData.autoBFP === "auto" ? calcBFP(personalData) : +personalData.specBFP;
     const FFMI = calcFFMI(personalData, BFP);
     const BMR = calcBMR(personalData, BFP);
     const TDEE = calcTDEE(personalData, BMR);

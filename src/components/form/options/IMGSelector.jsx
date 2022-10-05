@@ -18,7 +18,7 @@ function IMGSelector({ options, handleChange }) {
                     <option value="auto">{English ? "auto calc" : "calc auto"}</option>
                     <option value="spec">{English ? "specific" : "spécifique"}</option>
                 </select>
-                {options.autoIMG === "auto" ? null : (
+                {options.autoBFP === "auto" ? null : (
                     <input
                         name="specBFP"
                         type="number"
