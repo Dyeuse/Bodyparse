@@ -12,6 +12,7 @@ function Measurement({ measurement, handleChange, id, label, unity, min, max }) 
                 value={measurement}
                 min={min}
                 max={max}
+                required="required"
             />
             <div>{unity}</div>
         </div>
