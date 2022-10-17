@@ -1,0 +1,7 @@
+.selectors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    gap: 20px;
+}

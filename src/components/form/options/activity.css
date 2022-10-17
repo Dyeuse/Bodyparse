@@ -1,0 +1,9 @@
+.activity {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.activity select {
+    font-size: 1rem;
+}

@@ -1,34 +1,33 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import LanguageContext from "../../LanguageContext";
+import "./IMGSelector.css";
 
 function IMGSelector({ options, handleChange }) {
     const { currentLanguage } = useContext(LanguageContext);
     const English = currentLanguage === "English";
     return (
-        <div>
-            <label htmlFor="BFP">
-                {English ? "BFP" : "IMG"}
-                <select
-                    value={options.autoBFP}
-                    id="BFP"
-                    name="autoBFP"
+        <div className="IMGSelector">
+            <label htmlFor="BFP">{English ? "BFP" : "IMG"}</label>
+            <select
+                value={options.autoBFP}
+                id="BFP"
+                name="autoBFP"
+                onChange={handleChange}
+            >
+                <option value="auto">{English ? "auto calc" : "calc auto"}</option>
+                <option value="spec">{English ? "specific" : "spécifique"}</option>
+            </select>
+            {options.autoBFP === "auto" ? null : (
+                <input
+                    name="specBFP"
+                    type="number"
                     onChange={handleChange}
-                >
-                    <option value="auto">{English ? "auto calc" : "calc auto"}</option>
-                    <option value="spec">{English ? "specific" : "spécifique"}</option>
-                </select>
-                {options.autoBFP === "auto" ? null : (
-                    <input
-                        name="specBFP"
-                        type="number"
-                        onChange={handleChange}
-                        value={options.specBFP}
-                        min="3"
-                        max="60"
-                    />
-                )}
-            </label>
+                    value={options.specBFP}
+                    min="3"
+                    max="60"
+                />
+            )}
         </div>
     );
 }

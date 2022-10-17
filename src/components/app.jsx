@@ -38,11 +38,13 @@ function App() {
     );
     return (
         <LanguageContext.Provider value={value}>
-            <div className="container">
-                <h1>Bodyparse</h1>
-                <DataForm updatePersonalData={updatePersonalData} />
-                <Cards personalData={personalData} />
-            </div>
+            <section>
+                <div className="container">
+                    <h1>Bodyparse</h1>
+                    <DataForm updatePersonalData={updatePersonalData} />
+                    <Cards personalData={personalData} />
+                </div>
+            </section>
         </LanguageContext.Provider>
     );
 }

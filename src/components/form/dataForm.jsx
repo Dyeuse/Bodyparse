@@ -54,11 +54,11 @@ function DataForm({ updatePersonalData }) {
     return (
         <form onSubmit={handleSubmit}>
             <div className="personal-data">
+                <Options options={options} handleChange={handleOptionsChange} />
                 <Measurements
                     measurements={measurements}
                     handleChange={handleMeasurementsChange}
                 />
-                <Options options={options} handleChange={handleOptionsChange} />
             </div>
             <button type="submit">{English ? "Calculate" : "Calculer"}</button>
         </form>

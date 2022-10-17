@@ -1,0 +1,15 @@
+.selector {
+    flex-grow: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 5px 20px;
+    min-width: 100px;
+}
+
+.selector label {
+    padding-left: 10px;
+}
+
+.selector-option {
+    display: flex;
+}

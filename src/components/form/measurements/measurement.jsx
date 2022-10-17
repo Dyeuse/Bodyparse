@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./measurement.css";
 
 function Measurement({ measurement, handleChange, id, label, unity, min, max }) {
     return (
-        <div>
-            <label htmlFor={id}>{label}</label>
+        <div className="measurement">
+            <label htmlFor={id}>{`${label} (${unity})`}</label>
             <input
                 type="number"
                 onChange={handleChange}
@@ -14,7 +15,6 @@ function Measurement({ measurement, handleChange, id, label, unity, min, max }) 
                 max={max}
                 required="required"
             />
-            <div>{unity}</div>
         </div>
     );
 }

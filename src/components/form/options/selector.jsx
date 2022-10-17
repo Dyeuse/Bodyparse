@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./selector.css";
 
 function Selector({
     handleChange,
@@ -11,23 +12,27 @@ function Selector({
     name,
 }) {
     return (
-        <div onChange={handleChange}>
-            <label htmlFor={option1}>{label1}</label>
-            <input
-                type="radio"
-                id={option1}
-                name={name}
-                value={option1}
-                defaultChecked={selectedValue === option1}
-            />
-            <label htmlFor={option2}>{label2}</label>
-            <input
-                type="radio"
-                id={option2}
-                name={name}
-                value={option2}
-                defaultChecked={selectedValue === option2}
-            />
+        <div className="selector" onChange={handleChange}>
+            <div className="selector-option">
+                <input
+                    type="radio"
+                    id={option1}
+                    name={name}
+                    value={option1}
+                    defaultChecked={selectedValue === option1}
+                />
+                <label htmlFor={option1}>{label1}</label>
+            </div>
+            <div className="selector-option">
+                <input
+                    type="radio"
+                    id={option2}
+                    name={name}
+                    value={option2}
+                    defaultChecked={selectedValue === option2}
+                />
+                <label htmlFor={option2}>{label2}</label>
+            </div>
         </div>
     );
 }

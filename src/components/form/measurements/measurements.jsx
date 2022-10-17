@@ -31,7 +31,7 @@ function Measurements({ measurements, handleChange }) {
                 measurement={measurements.waist}
                 handleChange={handleChange}
                 id="waist"
-                label={English ? "waist" : "t de t"}
+                label={English ? "waist" : "tour de taille"}
                 unity="cm"
                 min="40"
                 max="200"

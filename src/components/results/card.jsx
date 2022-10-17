@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./card.css";
 
 function Card({ children, result }) {
     return (
-        <div>
+        <div className="card">
             <h2>{children}</h2>
-            <div>{result}</div>
+            <div className="result">{result}</div>
         </div>
     );
 }

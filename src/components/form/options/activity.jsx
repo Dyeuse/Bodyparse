@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import LanguageContext from "../../LanguageContext";
+import "./activity.css";
 
 function Activity({ options, handleChange }) {
     const { currentLanguage } = useContext(LanguageContext);
     const English = currentLanguage === "English";
     return (
-        <div>
+        <div className="activity">
             <label htmlFor="activity">
-                {English ? "weekly physical activity" : "activité physique hebdomadaire"}
+                {English ? "Physical activity" : "Activité physique"}
             </label>
             <select
                 value={options.activity}
