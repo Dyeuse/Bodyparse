@@ -1,8 +1,10 @@
 import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
+import FaceCard from "./faceCard";
+import BackCard from "./backCard";
 import "./card.css";
 
-function Card({ children, result }) {
+function Card({ frontTitle, result, backTitle, meaning }) {
     const [isHidden, setisHidden] = useState(true);
     const onClickHandler = useCallback((e) => {
         if ((e.type === "keydown" && e.keyCode === 13) || e.type === "click") {
@@ -21,29 +23,17 @@ function Card({ children, result }) {
             <div className="arrow">
                 {isHidden ? <span>&#129134;</span> : <span>&#129132;</span>}
             </div>
-            <div
-                className={`cardCountent concept ${
-                    isHidden ? "displayed" : "undisplayed"
-                }`}
-            >
-                <h2>{children}</h2>
-                <div>{result}</div>
-            </div>
-            <div
-                className={`cardCountent definition ${
-                    isHidden ? "undisplayed" : "displayed"
-                }`}
-            >
-                <h3>Definition</h3>
-                <div>Blablabla</div>
-            </div>
+            <FaceCard title={frontTitle} result={result} visibility={isHidden} />
+            <BackCard title={backTitle} meaning={meaning} visibility={isHidden} />
         </div>
     );
 }
 
 Card.propTypes = {
-    children: PropTypes.string.isRequired,
+    frontTitle: PropTypes.string.isRequired,
     result: PropTypes.number.isRequired,
+    backTitle: PropTypes.string.isRequired,
+    meaning: PropTypes.string.isRequired,
 };
 
 export default Card;
