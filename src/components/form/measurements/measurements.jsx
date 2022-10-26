@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Measurement from "./measurement";
 import LanguageContext from "../../LanguageContext";
-import "./measurements.css";
+import "./measurements.scss";
 
 function Measurements({ measurements, handleChange }) {
     const { currentLanguage } = useContext(LanguageContext);

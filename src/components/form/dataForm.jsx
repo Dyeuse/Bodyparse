@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Measurements from "./measurements/measurements";
 import Options from "./options/options";
 import LanguageContext from "../LanguageContext";
-import "./dataForm.css";
+import "./dataForm.scss";
 
 function useMeasurements() {
     const [measurements, setMeasurements] = useState({

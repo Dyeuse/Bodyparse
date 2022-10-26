@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import FaceCard from "./faceCard";
 import BackCard from "./backCard";
-import "./card.css";
+import "./card.scss";
 
 function Card({ frontTitle, result, backTitle, meaning }) {
     const [isHidden, setisHidden] = useState(true);

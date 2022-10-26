@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import LanguageContext from "../../LanguageContext";
-import "./IMGSelector.css";
+import "./IMGSelector.scss";
 
 function IMGSelector({ options, handleChange }) {
     const { currentLanguage } = useContext(LanguageContext);

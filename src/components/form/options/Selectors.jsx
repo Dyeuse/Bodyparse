@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Selector from "./selector";
 import LanguageContext from "../../LanguageContext";
-import "./selectors.css";
+import "./selectors.scss";
 
 function Selectors({ options, handleChange }) {
     const { currentLanguage, changeLanguage } = useContext(LanguageContext);

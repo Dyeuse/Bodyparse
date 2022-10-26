@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Selectors from "./Selectors";
 import IMGSelector from "./IMGSelector";
 import Activity from "./activity";
-import "./options.css";
+import "./options.scss";
 
 function Options({ options, handleChange }) {
     return (

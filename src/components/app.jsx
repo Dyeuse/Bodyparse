@@ -2,7 +2,7 @@ import React, { useCallback, useMemo, useState } from "react";
 import LanguageContext from "./LanguageContext";
 import DataForm from "./form/dataForm";
 import Cards from "./results/cards";
-import "./app.css";
+import "./app.scss";
 
 function usePersonelData() {
     const [personalData, setPersonalData] = useState({

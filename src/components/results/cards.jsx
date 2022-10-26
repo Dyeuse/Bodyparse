@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Card from "./card";
 import { calcBMI, calcBFP, calcFFMI, calcBMR, calcTDEE } from "../calculs/formulas";
-import "./cards.css";
+import "./cards.scss";
 import LanguageContext from "../LanguageContext";
 
 function getDataCards(personalData, english) {
