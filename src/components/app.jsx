@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useState } from "react";
 import usePersonelData from "./util/customHooks/usePersonelData";
 import LanguageContext from "./util/contexts/LanguageContext";
-import DataForm from "./form/dataForm";
+import BodyParseForm from "./form/bodyParseForm";
 import Cards from "./cards/cards";
 import "./_app.scss";
 
@@ -23,7 +23,7 @@ function App() {
             <section>
                 <div className="container">
                     <h1>Bodyparse</h1>
-                    <DataForm updatePersonalData={updatePersonalData} />
+                    <BodyParseForm updatePersonalData={updatePersonalData} />
                     <Cards personalData={personalData} />
                 </div>
             </section>

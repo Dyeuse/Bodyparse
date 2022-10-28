@@ -5,9 +5,9 @@ import useMeasurements from "../util/customHooks/useMeasurements";
 import LanguageContext from "../util/contexts/LanguageContext";
 import Options from "./options/options/options";
 import Measurements from "./measurements/measurements";
-import "./_dataForm.scss";
+import "./_bodyParseForm.scss";
 
-function DataForm({ updatePersonalData }) {
+function BodyParseForm({ updatePersonalData }) {
     const [measurements, handleMeasurementsChange] = useMeasurements();
     const [options, handleOptionsChange] = useOptions();
     const handleSubmit = useCallback((e) => {
@@ -31,8 +31,8 @@ function DataForm({ updatePersonalData }) {
     );
 }
 
-DataForm.propTypes = {
+BodyParseForm.propTypes = {
     updatePersonalData: PropTypes.func.isRequired,
 };
 
-export default DataForm;
+export default BodyParseForm;
