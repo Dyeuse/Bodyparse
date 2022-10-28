@@ -1,14 +1,14 @@
 import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
-import FaceCard from "./faceCard";
-import BackCard from "./backCard";
-import "./card.scss";
+import FaceCard from "./faceCard/faceCard";
+import BackCard from "./backCard/backCard";
+import "./_card.scss";
 
 function Card({ frontTitle, result, backTitle, meaning }) {
-    const [isHidden, setisHidden] = useState(true);
+    const [front, setfront] = useState(true);
     const onClickHandler = useCallback((e) => {
         if ((e.type === "keydown" && e.keyCode === 13) || e.type === "click") {
-            setisHidden((d) => !d);
+            setfront((d) => !d);
         }
     });
 
@@ -16,15 +16,15 @@ function Card({ frontTitle, result, backTitle, meaning }) {
         <div className="card">
             <input
                 type="checkbox"
-                className="toggleDefinition"
+                className="card__toggler"
                 onClick={onClickHandler}
                 onKeyDown={onClickHandler}
             />
-            <div className="arrow">
-                {isHidden ? <span>&#129134;</span> : <span>&#129132;</span>}
+            <div className="card__arrow">
+                {front ? <span>&#129134;</span> : <span>&#129132;</span>}
             </div>
-            <FaceCard title={frontTitle} result={result} visibility={isHidden} />
-            <BackCard title={backTitle} meaning={meaning} visibility={isHidden} />
+            <FaceCard title={frontTitle} result={result} visibility={front} />
+            <BackCard title={backTitle} meaning={meaning} visibility={front} />
         </div>
     );
 }

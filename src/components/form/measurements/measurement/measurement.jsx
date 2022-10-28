@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./measurement.scss";
+import "./_measurement.scss";
 
 function Measurement({ measurement, handleChange, id, label, unity, min, max }) {
     return (

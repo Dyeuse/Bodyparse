@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import LanguageContext from "../../LanguageContext";
-import "./activity.scss";
+import LanguageContext from "../../../util/LanguageContext";
+import "./_activity.scss";
 
 function Activity({ options, handleChange }) {
     const { currentLanguage } = useContext(LanguageContext);

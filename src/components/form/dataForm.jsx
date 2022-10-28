@@ -1,9 +1,9 @@
 import React, { useCallback, useState, useContext } from "react";
 import PropTypes from "prop-types";
 import Measurements from "./measurements/measurements";
-import Options from "./options/options";
-import LanguageContext from "../LanguageContext";
-import "./dataForm.scss";
+import Options from "./options/options/options";
+import LanguageContext from "../util/LanguageContext";
+import "./_dataForm.scss";
 
 function useMeasurements() {
     const [measurements, setMeasurements] = useState({

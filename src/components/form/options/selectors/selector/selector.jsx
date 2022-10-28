@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./selector.scss";
+import "./_selector.scss";
 
 function Selector({
     handleChange,

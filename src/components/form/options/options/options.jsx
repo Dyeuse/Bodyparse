@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Selectors from "./Selectors";
-import IMGSelector from "./IMGSelector";
-import Activity from "./activity";
-import "./options.scss";
+import Selectors from "../selectors/Selectors";
+import IMGSelector from "../IMGSelector/IMGSelector";
+import Activity from "../activity/activity";
+import "./_options.scss";
 
 function Options({ options, handleChange }) {
     return (
