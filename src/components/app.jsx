@@ -1,27 +1,9 @@
 import React, { useCallback, useMemo, useState } from "react";
-import LanguageContext from "./util/LanguageContext";
+import usePersonelData from "./util/customHooks/usePersonelData";
+import LanguageContext from "./util/contexts/LanguageContext";
 import DataForm from "./form/dataForm";
 import Cards from "./cards/cards";
 import "./_app.scss";
-
-function usePersonelData() {
-    const [personalData, setPersonalData] = useState({
-        height: "",
-        weight: "",
-        waist: "",
-        neck: "",
-        gender: "",
-        activity: "",
-        autoBFP: "",
-        specBFP: "",
-    });
-    const updatePersonalData = useCallback((newPersonalData) => {
-        setPersonalData(newPersonalData);
-        console.log(newPersonalData);
-    });
-
-    return [personalData, updatePersonalData];
-}
 
 function App() {
     const [personalData, updatePersonalData] = usePersonelData();

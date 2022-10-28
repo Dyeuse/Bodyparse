@@ -1,49 +1,15 @@
-import React, { useCallback, useState, useContext } from "react";
+import React, { useCallback, useContext } from "react";
 import PropTypes from "prop-types";
-import Measurements from "./measurements/measurements";
+import useOptions from "../util/customHooks/useOptions";
+import useMeasurements from "../util/customHooks/useMeasurements";
+import LanguageContext from "../util/contexts/LanguageContext";
 import Options from "./options/options/options";
-import LanguageContext from "../util/LanguageContext";
+import Measurements from "./measurements/measurements";
 import "./_dataForm.scss";
-
-function useMeasurements() {
-    const [measurements, setMeasurements] = useState({
-        height: "",
-        weight: "",
-        waist: "",
-        neck: "",
-    });
-
-    const handleMeasurementsChange = useCallback((e) => {
-        const name = e.target.id;
-        const newValues = +e.target.value;
-        setMeasurements({ ...measurements, [name]: newValues });
-    });
-
-    return [measurements, handleMeasurementsChange];
-}
-
-function useOptions() {
-    const [options, setOptions] = useState({
-        gender: "Mal",
-        activity: "1.2",
-        autoBFP: "auto",
-        specBFP: "",
-    });
-
-    const handleOptionsChange = useCallback((e) => {
-        const { name } = e.target;
-        const newValues = name === "specBFP" ? +e.target.value : e.target.value;
-        setOptions({ ...options, [name]: newValues });
-    });
-
-    return [options, handleOptionsChange];
-}
 
 function DataForm({ updatePersonalData }) {
     const [measurements, handleMeasurementsChange] = useMeasurements();
-
     const [options, handleOptionsChange] = useOptions();
-
     const handleSubmit = useCallback((e) => {
         e.preventDefault();
         updatePersonalData({ ...measurements, ...options });

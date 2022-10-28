@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import LanguageContext from "../../../util/LanguageContext";
+import LanguageContext from "../../../util/contexts/LanguageContext";
 import "./_IMGSelector.scss";
 
 function IMGSelector({ options, handleChange }) {

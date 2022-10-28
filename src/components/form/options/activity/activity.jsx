@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import LanguageContext from "../../../util/LanguageContext";
+import LanguageContext from "../../../util/contexts/LanguageContext";
 import "./_activity.scss";
 
 function Activity({ options, handleChange }) {

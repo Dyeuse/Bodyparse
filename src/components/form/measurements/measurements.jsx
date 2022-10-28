@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Measurement from "./measurement/measurement";
-import LanguageContext from "../../util/LanguageContext";
+import LanguageContext from "../../util/contexts/LanguageContext";
 import "./_measurements.scss";
 
 function Measurements({ measurements, handleChange }) {
