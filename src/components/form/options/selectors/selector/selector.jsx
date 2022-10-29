@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./_selector.scss";
+import styles from "./selector.module.scss";
 
 function Selector({
     handleChange,
@@ -12,8 +12,8 @@ function Selector({
     name,
 }) {
     return (
-        <div className="selector" onChange={handleChange}>
-            <div className="selector-option">
+        <div className={styles.selector} onChange={handleChange}>
+            <div className={styles["selector-option"]}>
                 <input
                     type="radio"
                     id={option1}

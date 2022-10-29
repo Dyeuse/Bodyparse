@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./_faceCard.scss";
+import styles from "./faceCard.module.scss";
 
 function FaceCard({ title, result, visibility }) {
     return (
-        <div className={`face-card ${visibility || "face-card--undisplayed"}`}>
+        <div className={`${styles["face-card"]} ${visibility || styles.undisplayed}`}>
             <h2>{title}</h2>
             <div>{result}</div>
         </div>

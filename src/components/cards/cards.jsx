@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import LanguageContext from "../util/contexts/LanguageContext";
 import getDataCards from "../util/calculs/getDataCards";
 import Card from "./card/card";
-import "./_cards.scss";
+import styles from "./cards.module.scss";
 
 function Cards({ personalData }) {
     const { currentLanguage } = useContext(LanguageContext);
@@ -19,7 +19,7 @@ function Cards({ personalData }) {
         />
     ));
 
-    return <div className="cards">{listOfCards}</div>;
+    return <div className={styles.cards}>{listOfCards}</div>;
 }
 
 export default Cards;

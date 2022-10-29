@@ -1,4 +1,4 @@
-.back-card {
+.face-card {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -12,9 +12,8 @@
     z-index: 1;
     opacity: 1;
     transition: 1s ease-in-out;
-    background-color: rgba(255, 255, 255, 0.7);
 
-    &--undisplayed {
+    &.undisplayed {
         z-index: 0;
         opacity: 0;
         transition: 1s ease-in-out;
@@ -23,6 +22,6 @@
 
     div {
         padding: 0 10px 10px;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 }

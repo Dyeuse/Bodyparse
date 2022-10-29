@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./_measurement.scss";
+import styles from "./measurement.module.scss";
 
 function Measurement({ measurement, handleChange, id, label, unity, min, max }) {
     return (
-        <div className="measurement">
+        <div className={styles.measurement}>
             <label htmlFor={id}>{`${label} (${unity})`}</label>
             <input
                 type="number"

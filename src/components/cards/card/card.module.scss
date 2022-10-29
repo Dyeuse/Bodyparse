@@ -8,7 +8,7 @@
     min-height: 150px;
     cursor: default;
 
-    &__toggler {
+    .toggler {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -19,7 +19,7 @@
         opacity: 0;
     }
 
-    &__arrow {
+    .arrow {
         position: absolute;
         display: inline-block;
         bottom: 0;

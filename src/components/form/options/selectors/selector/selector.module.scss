@@ -4,12 +4,12 @@
     border-radius: 6px;
     padding: 5px 20px;
     min-width: 100px;
-}
 
-.selector label {
-    padding-left: 10px;
-}
+    &-option {
+        display: flex;
+    }
 
-.selector-option {
-    display: flex;
+    label {
+        padding-left: 10px;
+    }
 }

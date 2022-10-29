@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import Selectors from "../selectors/Selectors";
 import IMGSelector from "../IMGSelector/IMGSelector";
 import Activity from "../activity/activity";
-import "./_options.scss";
+import styles from "./options.module.scss";
 
 function Options({ options, handleChange }) {
     return (
-        <div className="options">
+        <div className={styles.options}>
             <Selectors options={options} handleChange={handleChange} />
             <IMGSelector options={options} handleChange={handleChange} />
             <Activity options={options} handleChange={handleChange} />

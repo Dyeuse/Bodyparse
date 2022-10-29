@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Measurement from "./measurement/measurement";
 import LanguageContext from "../../util/contexts/LanguageContext";
-import "./_measurements.scss";
+import styles from "./measurements.module.scss";
 
 function Measurements({ measurements, handleChange }) {
     const { currentLanguage } = useContext(LanguageContext);
     const English = currentLanguage === "English";
     return (
-        <div className="measurements">
+        <div className={styles.measurements}>
             <Measurement
                 measurement={measurements.height}
                 handleChange={handleChange}

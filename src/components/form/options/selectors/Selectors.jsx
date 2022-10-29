@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Selector from "./selector/selector";
 import LanguageContext from "../../../util/contexts/LanguageContext";
-import "./_selectors.scss";
+import styles from "./selectors.module.scss";
 
 function Selectors({ options, handleChange }) {
     const { currentLanguage, changeLanguage } = useContext(LanguageContext);
     const English = currentLanguage === "English";
     return (
-        <div className="selectors">
+        <div className={styles.selectors}>
             <Selector
                 handleChange={changeLanguage}
                 selectedValue={currentLanguage}

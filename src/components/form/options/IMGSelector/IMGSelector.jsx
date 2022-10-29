@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import LanguageContext from "../../../util/contexts/LanguageContext";
-import "./_IMGSelector.scss";
+import styles from "./IMGSelector.module.scss";
 
 function IMGSelector({ options, handleChange }) {
     const { currentLanguage } = useContext(LanguageContext);
     const English = currentLanguage === "English";
     return (
-        <div className="IMGSelector">
+        <div className={styles.IMGSelector}>
             <label htmlFor="BFP">{English ? "BFP" : "IMG"}</label>
             <select
                 value={options.autoBFP}

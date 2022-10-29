@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./_backCard.scss";
+import styles from "./backCard.module.scss";
 
 function BackCard({ title, meaning, visibility }) {
     return (
-        <div className={`back-card ${visibility && "back-card--undisplayed"}`}>
+        <div className={`${styles["back-card"]} ${visibility && styles.undisplayed}`}>
             <h3>{title}</h3>
             <div>{meaning}</div>
         </div>

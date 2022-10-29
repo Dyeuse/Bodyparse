@@ -1,0 +1,31 @@
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(
+        -30deg,
+        #03a9f4 0%,
+        #3a78b7 50%,
+        #262626 50%,
+        #607d8b 100%
+    );
+
+    .container {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        box-shadow: 0 5px 35px rgba(0, 0, 0, 0.8);
+        margin: 20px;
+        max-width: 900px;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: 600;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

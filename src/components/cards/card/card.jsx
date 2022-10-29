@@ -2,7 +2,7 @@ import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import FaceCard from "./faceCard/faceCard";
 import BackCard from "./backCard/backCard";
-import "./_card.scss";
+import styles from "./card.module.scss";
 
 function Card({ frontTitle, result, backTitle, meaning }) {
     const [front, setfront] = useState(true);
@@ -13,14 +13,14 @@ function Card({ frontTitle, result, backTitle, meaning }) {
     });
 
     return (
-        <div className="card">
+        <div className={styles.card}>
             <input
                 type="checkbox"
-                className="card__toggler"
+                className={styles.toggler}
                 onClick={onClickHandler}
                 onKeyDown={onClickHandler}
             />
-            <div className="card__arrow">
+            <div className={styles.arrow}>
                 {front ? <span>&#129134;</span> : <span>&#129132;</span>}
             </div>
             <FaceCard title={frontTitle} result={result} visibility={front} />

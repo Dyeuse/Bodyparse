@@ -5,7 +5,7 @@ import useMeasurements from "../util/customHooks/useMeasurements";
 import LanguageContext from "../util/contexts/LanguageContext";
 import Options from "./options/options/options";
 import Measurements from "./measurements/measurements";
-import "./_bodyParseForm.scss";
+import styles from "./bodyParseForm.module.scss";
 
 function BodyParseForm({ updatePersonalData }) {
     const [measurements, handleMeasurementsChange] = useMeasurements();
@@ -18,8 +18,8 @@ function BodyParseForm({ updatePersonalData }) {
     const English = currentLanguage === "English";
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div className="personal-data">
+        <form className={styles["bodyparse-form"]} onSubmit={handleSubmit}>
+            <div className={styles["personal-data"]}>
                 <Options options={options} handleChange={handleOptionsChange} />
                 <Measurements
                     measurements={measurements}
