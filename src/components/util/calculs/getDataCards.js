@@ -1,12 +1,21 @@
 import { calcBMI, calcBFP, calcFFMI, calcBMR, calcTDEE } from "./formulas";
 
 function getDataCards(personalData, english) {
-    const BMI = calcBMI(personalData);
-    const BFP =
-        personalData.autoBFP === "auto" ? calcBFP(personalData) : +personalData.specBFP;
-    const FFMI = calcFFMI(personalData, BFP);
-    const BMR = calcBMR(personalData, BFP);
-    const TDEE = calcTDEE(personalData, BMR);
+    let BMI = "---";
+    let BFP = "---";
+    let FFMI = "---";
+    let BMR = "---";
+    let TDEE = "---";
+    if (personalData.available) {
+        BMI = calcBMI(personalData);
+        BFP =
+            personalData.autoBFP === "auto"
+                ? calcBFP(personalData)
+                : +personalData.specBFP;
+        FFMI = calcFFMI(personalData, BFP);
+        BMR = calcBMR(personalData, BFP);
+        TDEE = calcTDEE(personalData, BMR);
+    }
 
     const bilingualDataCards = {
         english: [

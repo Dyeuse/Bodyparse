@@ -12,7 +12,7 @@ function BodyParseForm({ updatePersonalData }) {
     const [options, handleOptionsChange] = useOptions();
     const handleSubmit = useCallback((e) => {
         e.preventDefault();
-        updatePersonalData({ ...measurements, ...options });
+        updatePersonalData({ ...measurements, ...options, available: true });
     });
     const { currentLanguage } = useContext(LanguageContext);
     const English = currentLanguage === "English";

@@ -31,7 +31,7 @@ function Card({ frontTitle, result, backTitle, meaning }) {
 
 Card.propTypes = {
     frontTitle: PropTypes.string.isRequired,
-    result: PropTypes.number.isRequired,
+    result: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
     backTitle: PropTypes.string.isRequired,
     meaning: PropTypes.string.isRequired,
 };

@@ -10,6 +10,7 @@ function usePersonelData() {
         activity: "",
         autoBFP: "",
         specBFP: "",
+        available: false,
     });
     const updatePersonalData = useCallback((newPersonalData) => {
         setPersonalData(newPersonalData);

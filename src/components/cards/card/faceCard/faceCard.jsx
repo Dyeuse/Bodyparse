@@ -13,7 +13,7 @@ function FaceCard({ title, result, visibility }) {
 
 FaceCard.propTypes = {
     title: PropTypes.string.isRequired,
-    result: PropTypes.number.isRequired,
+    result: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])]).isRequired,
     visibility: PropTypes.bool.isRequired,
 };
 
