@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import useOptions from "../util/customHooks/useOptions";
 import useMeasurements from "../util/customHooks/useMeasurements";
 import LanguageContext from "../util/contexts/LanguageContext";
-import Options from "./options/options/options";
+import Options from "./options/options";
 import Measurements from "./measurements/measurements";
 import styles from "./bodyParseForm.module.scss";
 
