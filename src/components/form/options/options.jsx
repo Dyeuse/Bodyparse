@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Selectors from "./selectors/Selectors";
+import Selectors from "./selectors/selectors";
 import IMGSelector from "./BFPSelector/BFPSelector";
 import Activity from "./activity/activity";
 import styles from "./options.module.scss";
