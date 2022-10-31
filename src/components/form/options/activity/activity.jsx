@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import PropTypes from "prop-types";
 import LanguageContext from "../../../util/contexts/LanguageContext";
 import styles from "./activity.module.scss";
 
@@ -31,5 +32,16 @@ function Activity({ options, handleChange }) {
         </div>
     );
 }
+
+Activity.propTypes = {
+    options: PropTypes.shape({
+        gender: PropTypes.string.isRequired,
+        activity: PropTypes.string.isRequired,
+        autoBFP: PropTypes.string.isRequired,
+        specBFP: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])])
+            .isRequired,
+    }).isRequired,
+    handleChange: PropTypes.func.isRequired,
+};
 
 export default Activity;

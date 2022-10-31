@@ -23,6 +23,7 @@ Measurement.propTypes = {
     measurement: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([""])])
         .isRequired,
     handleChange: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     unity: PropTypes.string.isRequired,
     min: PropTypes.string.isRequired,

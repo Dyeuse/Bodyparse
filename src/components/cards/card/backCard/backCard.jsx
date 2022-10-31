@@ -11,4 +11,10 @@ function BackCard({ title, meaning, visibility }) {
     );
 }
 
+BackCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    meaning: PropTypes.string.isRequired,
+    visibility: PropTypes.bool.isRequired,
+};
+
 export default BackCard;

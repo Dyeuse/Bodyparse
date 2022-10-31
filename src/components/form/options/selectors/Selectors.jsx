@@ -14,16 +14,16 @@ function Selectors({ options, handleChange }) {
                 selectedValue={currentLanguage}
                 option1="English"
                 option2="French"
-                label1={English ? "English" : "Anglais"}
-                label2={English ? "French" : "Français"}
+                label1="English"
+                label2="Français"
                 name="language"
             />
             <Selector
                 handleChange={handleChange}
                 selectedValue={options.gender}
-                option1="Mal"
+                option1="Male"
                 option2="Female"
-                label1={English ? "Mal" : "Homme"}
+                label1={English ? "Male" : "Homme"}
                 label2={English ? "Female" : "Femme"}
                 name="gender"
             />

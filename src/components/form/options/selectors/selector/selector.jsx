@@ -42,6 +42,8 @@ Selector.propTypes = {
     selectedValue: PropTypes.string.isRequired,
     option1: PropTypes.string.isRequired,
     option2: PropTypes.string.isRequired,
+    label1: PropTypes.string.isRequired,
+    label2: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
 };
 

@@ -11,4 +11,10 @@ function FaceCard({ title, result, visibility }) {
     );
 }
 
+FaceCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    result: PropTypes.number.isRequired,
+    visibility: PropTypes.bool.isRequired,
+};
+
 export default FaceCard;

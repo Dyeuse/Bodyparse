@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 
 function useOptions() {
     const [options, setOptions] = useState({
-        gender: "Mal",
+        gender: "Male",
         activity: "1.2",
         autoBFP: "auto",
         specBFP: "",
