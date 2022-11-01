@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import Selector from "./selector/selector";
-import LanguageContext from "../../../util/contexts/LanguageContext";
+import LanguageContext from "../../../../util/contexts/LanguageContext";
 import styles from "./selectors.module.scss";
 
 function Selectors({ options, handleChange }) {

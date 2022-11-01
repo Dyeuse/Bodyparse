@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import LanguageContext from "../util/contexts/LanguageContext";
-import getDataCards from "../util/calculs/getDataCards";
+import LanguageContext from "../../util/contexts/LanguageContext";
+import getDataCards from "../../util/calculs/getDataCards";
 import Card from "./card/card";
 import styles from "./cards.module.scss";
 
