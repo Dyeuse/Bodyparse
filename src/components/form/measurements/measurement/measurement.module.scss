@@ -1,3 +1,5 @@
+@use "../../../../style/abstracts/mixins" as m;
+
 .measurement {
     margin-bottom: 20px;
 
@@ -6,13 +8,12 @@
     }
 
     input {
+        @include m.border;
         width: 100%;
         outline: none;
-        border: 1px solid rgba(255, 255, 255, 0.2);
         background: transparent;
         padding: 3px 10px;
         padding-left: 35px;
-        border-radius: 6px;
         color: #fff;
         font-size: 1.3rem;
         font-weight: 300;
