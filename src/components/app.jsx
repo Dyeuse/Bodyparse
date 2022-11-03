@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useState } from "react";
-import usePersonelData from "./util/customHooks/usePersonelData";
-import LanguageContext from "./util/contexts/LanguageContext";
+import usePersonelData from "../util/customHooks/usePersonelData";
+import LanguageContext from "../util/contexts/LanguageContext";
 import BodyParseForm from "./form/bodyParseForm";
 import Cards from "./cards/cards";
 import styles from "./app.module.scss";
