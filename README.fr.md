@@ -6,7 +6,7 @@
 Auteur : <ins>Dyeuse</ins>
 <br />Dernière version : <ins>Octobre 2022</ins>
 
-**[===> TESTER <===](https://dev-bodyparse.netlify.app/)**
+**[===> TESTER <===](https://bodyparse.netlify.app/)**
 
 ## Description
 
