@@ -8,7 +8,9 @@ function BFPSelector({ options, handleChange }) {
     const English = currentLanguage === "English";
     return (
         <div className={styles.BFPSelector}>
-            <label htmlFor="BFP">{English ? "BFP" : "IMG"}</label>
+            <label htmlFor="BFP">
+                {English ? "Body Fat Percentage" : "Taux de Masse Grâce"}
+            </label>
             <select
                 value={options.autoBFP}
                 id="BFP"
