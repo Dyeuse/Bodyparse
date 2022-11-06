@@ -1,3 +1,4 @@
+@use "../style/abstracts/mixins" as m;
 @use "../style/abstracts/variables" as v;
 
 .section {
@@ -8,7 +9,7 @@
     background: v.$main-bg;
 
     .container {
-        background: rgba(255, 255, 255, 0.1);
+        @include m.transparent;
         border-radius: 5px;
         box-shadow: v.$main-shadow;
         margin: 20px;

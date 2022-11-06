@@ -13,3 +13,41 @@
         background-color: #fff;
     }
 }
+
+@mixin undisplayed-card {
+    z-index: 0;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    background-color: inherit;
+}
+
+@mixin transparent($color: white, $alpha: 0.1) {
+    background-color: rgba($color, $alpha);
+}
+
+@mixin face-and-back($alpha: 0.1) {
+    @include transparent($alpha: $alpha);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 1;
+    transition: 1s ease-in-out;
+
+    &.undisplayed {
+        @include undisplayed-card;
+    }
+}
+
+@mixin phone {
+    @media (max-width: 499px) {
+        @content;
+    }
+}

@@ -10,7 +10,7 @@
     margin: 20px;
     padding: 10px;
 
-    @media screen and (max-width: 499px) {
+    @include m.phone {
         .measurements {
             max-width: 280px;
         }

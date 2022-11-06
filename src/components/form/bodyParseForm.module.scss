@@ -2,11 +2,11 @@
 @use "../../style/abstracts/variables" as v;
 
 .bodyparse-form {
+    @include m.transparent;
     display: flex;
     flex-direction: column;
     margin: 0 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
+    border-radius: 5px;
     box-shadow: v.$main-shadow;
 
     .personal-data {
@@ -14,7 +14,7 @@
         justify-content: center;
     }
 
-    @media screen and (max-width: 499px) {
+    @include m.phone {
         .personal-data {
             flex-wrap: wrap;
         }

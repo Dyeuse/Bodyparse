@@ -1,24 +1,7 @@
-.face-card {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    z-index: 1;
-    opacity: 1;
-    transition: 1s ease-in-out;
+@use "../../../../style/abstracts/mixins" as m;
 
-    &.undisplayed {
-        z-index: 0;
-        opacity: 0;
-        transition: 1s ease-in-out;
-        background-color: inherit;
-    }
+.face-card {
+    @include m.face-and-back;
 
     div {
         padding: 0 10px 10px;
