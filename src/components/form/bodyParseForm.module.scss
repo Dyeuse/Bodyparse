@@ -1,4 +1,5 @@
 @use "../../style/abstracts/mixins" as m;
+@use "../../style/abstracts/variables" as v;
 
 .bodyparse-form {
     display: flex;
@@ -6,7 +7,7 @@
     margin: 0 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
-    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.8);
+    box-shadow: v.$main-shadow;
 
     .personal-data {
         display: flex;
