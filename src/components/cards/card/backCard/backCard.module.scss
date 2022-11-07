@@ -1,7 +1,9 @@
 @use "../../../../style/abstracts/mixins" as m;
+@use "../../../../style/abstracts/variables" as v;
 
 .back-card {
     @include m.face-and-back($alpha: 0.7);
+    color: v.$secondary-color;
 
     div {
         padding: 0 10px 10px;
