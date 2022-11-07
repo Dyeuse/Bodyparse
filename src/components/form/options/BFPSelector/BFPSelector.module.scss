@@ -13,17 +13,7 @@
     }
 
     input[name="specBFP"] {
-        @include m.border;
-        width: 100%;
-        outline: none;
-        background: transparent;
+        @include m.number-input;
         margin-top: 5px;
-        padding: 3px 10px;
-        padding-left: 35px;
-        color: v.$main-color;
-        font-size: 1.3rem;
-        font-weight: 300;
-        box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
-        appearance: textfield;
     }
 }
