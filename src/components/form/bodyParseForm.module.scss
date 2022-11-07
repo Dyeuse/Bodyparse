@@ -24,7 +24,7 @@
         @include m.light-bg;
         width: fit-content;
         margin: 20px auto;
-        color: #111;
+        color: v.$secondary-color;
         max-width: 100px;
         padding: 8px 10px;
         box-shadow: none;
